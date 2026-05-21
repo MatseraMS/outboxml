@@ -58,7 +58,7 @@
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Validators</a></li>
 <li class="toctree-l4"><a class="reference internal" href="predict.html">Prediction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="monitoring_factory.html">Monitoring Factory</a></li>
-<li class="toctree-l4"><a class="reference internal" href="index.html#email-module">Email Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#module-outboxml.core.email">Email Module</a></li>
 </ul>
 </li>
 </ul>
@@ -96,8 +96,55 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="validators">
-<h1>Validators<a class="headerlink" href="#validators" title="Link to this heading"></a></h1>
+  <section id="module-outboxml.core.validators">
+<span id="validators"></span><h1>Validators<a class="headerlink" href="#module-outboxml.core.validators" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="outboxml.core.validators.BaseValidator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">outboxml.core.validators.</span></span><span class="sig-name descname"><span class="pre">BaseValidator</span></span><a class="reference internal" href="../../_modules/outboxml/core/validators.html#BaseValidator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#outboxml.core.validators.BaseValidator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/abc.html#abc.ABC" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="outboxml.core.validators.BaseValidator.validate">
+<span class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/outboxml/core/validators.html#BaseValidator.validate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#outboxml.core.validators.BaseValidator.validate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="outboxml.core.validators.GroupValidator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">outboxml.core.validators.</span></span><span class="sig-name descname"><span class="pre">GroupValidator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/outboxml/core/validators.html#GroupValidator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#outboxml.core.validators.GroupValidator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#outboxml.core.validators.BaseValidator" title="outboxml.core.validators.BaseValidator"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseValidator</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>group</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><em>List</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><em>Dict</em></a><em>]</em>)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="outboxml.core.validators.GroupValidator.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/outboxml/core/validators.html#GroupValidator.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#outboxml.core.validators.GroupValidator.__init__" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>group</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><em>List</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><em>Dict</em></a><em>]</em>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="outboxml.core.validators.GroupValidator.validate_ensemble">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">validate_ensemble</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ensemble</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/outboxml/core/validators.html#GroupValidator.validate_ensemble"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#outboxml.core.validators.GroupValidator.validate_ensemble" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ensemble</strong> (<em>EnsembleResult</em>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="outboxml.core.validators.GroupValidator.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/outboxml/core/validators.html#GroupValidator.validate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#outboxml.core.validators.GroupValidator.validate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 
 
